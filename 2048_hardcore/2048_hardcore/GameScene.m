@@ -11,6 +11,7 @@
 @implementation GameScene {
     SKShapeNode *_spinnyNode;
     SKLabelNode *_label;
+    
 }
 
 - (void)didMoveToView:(SKView *)view {
