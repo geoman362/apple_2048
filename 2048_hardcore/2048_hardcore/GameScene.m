@@ -11,6 +11,7 @@
 @implementation GameScene {
     SKShapeNode *_spinnyNode;
     SKLabelNode *_label;
+    int *_timeLeft;
     
 }
 
@@ -18,10 +19,12 @@
     // Setup your scene here
     
     // Get label node from scene and store it for use later
-    _label = (SKLabelNode *)[self childNodeWithName:@"//helloLabel"];
+    _label = (SKLabelNode *)[self childNodeWithName:@"//timerLabel"];
     
     _label.alpha = 0.0;
+    _label.text = @"Time till next block = \(timeLeft)";
     [_label runAction:[SKAction fadeInWithDuration:2.0]];
+    
     
     CGFloat w = (self.size.width + self.size.height) * 0.05;
     
